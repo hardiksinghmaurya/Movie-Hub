@@ -5,7 +5,7 @@ function Navbar({ searchMovies, setSearchMovies, search }) {
         <nav className="navbar bg-dark  px-3 navbar-box">
             <div className="container-fluid">
                 <span className="navbar-brand fw-medium">
-                <img src="public/latesthdmovieshub-removebg-preview.png" alt="" /></span>
+                <img src="/latesthdmovieshub-removebg-preview.png" /></span>
                 <div className="d-flex input-text">
                     <input className="form-control px-3 py-2 mx-2 border border-3 border-primary rounded-pill " type="text" placeholder="Search for movies"  value={searchMovies} onChange={(val) => setSearchMovies(val.target.value)} />
 
