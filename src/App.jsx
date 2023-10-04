@@ -24,20 +24,26 @@ export default function App() {
   return (
     <>
 
-    <Navbar searchMovies={searchMovies} setSearchMovies={setSearchMovies} search={search} />
+      <Navbar searchMovies={searchMovies} setSearchMovies={setSearchMovies} search={search} />
 
       <main className="main bg-dark min-vh-100 d-flex justify-content-center align-item-center">
         {
           movies?.length > 0
             ?
             (
-                        <div className="card-box d-flex flex-wrap flex-md-wrap px-5">
-                        {movies.map((movie, key) =>
-                        <Card movie={movie} key={key}/>
-                        )}
-                        </div>
+              <div className="container">
+                <div className="row">
+                  <div className="col">
+                    <div className="card-box d-flex justify-content-center flex-wrap flex-md-wrap">
+                      {movies.map((movie, key) =>
+                        <Card movie={movie} key={key} />
+                      )}
+                    </div>
+                  </div>
+                </div>
+              </div>
             ) :
-            
+
             "https://via.placeholder.com/400"
         }
       </main>
